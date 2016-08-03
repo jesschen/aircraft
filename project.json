@@ -1,0 +1,39 @@
+{
+    "project_type": "javascript",
+
+    "debugMode" : 1,
+    "showFPS" : true,
+    "frameRate" : 60,
+    "id" : "gameCanvas",
+    "renderMode" : 1,
+    "engineDir":"frameworks/cocos2d-html5",
+
+    "modules" : ["core",
+            "shape-nodes", "actions",
+            "transitions",
+            "text-input", "menus"],
+
+    "jsList" : [
+        "src/resource.js",
+        "src/defines.js",
+        "src/util.js",
+        "src/app.js",
+        "src/GameLayer.js",
+        "src/Ground.js",
+        "src/ScoreBoard.js",
+        "src/ResultLayer.js",
+        "src/PlotData.js",
+        "src/BulletType.js",
+        "src/WeaponType.js",
+        "src/AircraftType.js",
+        "src/AircraftTeamType.js",
+        "src/PathType.js",
+        "src/Aircraft.js",
+        "src/Enemy.js",
+        "src/EnemyGenerator.js",
+        "src/Hero.js",
+        "src/MyBezierBy.js",
+        "src/explosion.js"
+    ]
+}
+
