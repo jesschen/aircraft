@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<project name="Javascript compress project" basedir="." default="compile">
+
+	<taskdef name="jscomp" classname="com.google.javascript.jscomp.ant.CompileTask"
+					 classpath="D:\tools\closure-compiler\compiler.jar"/>
+
+	<target name="compile" depends="clear">
+		<copy todir="./publish/html5">
+			<fileset dir="${basedir}">
+				<include name="main.css" />
+				<include name="res/" />
+			</fileset>
+		</copy>
+
+		<jscomp compilationLevel="simple"
+						warning="quiet"
+						debug="false"
+						output="./publish/html5/game.min.js"
+						languagein="ECMASCRIPT5"
+                >
+			<sources dir="${basedir}">
+				<file name="main.js"/>
+				<file name="frameworks/cocos2d-js-v3.6.js"/>
+			</sources>
+			<sources dir="${basedir}/src">
+				<file name="defines.js"/>
+				<file name="resource.js"/>
+				<file name="Aircraft.js"/>
+				<file name="AircraftTeamType.js"/>
+				<file name="AircraftType.js"/>
+				<file name="app.js"/>
+				<file name="BulletType.js"/>
+				<file name="Enemy.js"/>
+				<file name="EnemyGenerator.js"/>
+				<file name="explosion.js"/>
+				<file name="GameLayer.js"/>
+				<file name="Ground.js"/>
+				<file name="Hero.js"/>
+				<file name="MyBezierBy.js"/>
+				<file name="PathType.js"/>
+				<file name="PlotData.js"/>
+				<file name="ResultLayer.js"/>
+				<file name="ScoreBoard.js"/>
+				<file name="util.js"/>
+				<file name="WeaponType.js"/>
+			</sources>
+		</jscomp>
+	</target>
+	<target name="clear">
+		<delete file="./publish/html5/game.min.js"/>
+		<delete dir="./publish/html5/res"/>
+	</target>
+</project>

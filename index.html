@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>全民飞机大战</title>
+    <meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="main.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div id="loading">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+        </div>
+        <p class="loading-txt"><span id="loading-num">0</span>%</p>
+        <div class="loading-slogan"></div>
+    </div>
+<div id="pages" style="display:none">
+    <div id="page1" class="page">
+        <div class="slogan"></div>
+        <a id="next" class="button">开始游戏</a>
+        <div class="aircraft"></div>
+        <p class="bottomText">开始游戏寻找记忆&nbsp;一起回到那一年</p>
+    </div>
+    <div id="page2" class="page">
+        <div class="enemyRank">
+            <div>
+                <div class="enemy"></div>
+                <div class="enemy"></div>
+                <div class="enemy"></div>
+                <div class="enemy"></div>
+                <div class="enemy"></div>
+            </div>
+            <div>
+                <div class="enemy"></div>
+                <div class="enemy"></div>
+                <div class="enemy"></div>
+                <div class="enemy"></div>
+                <div class="enemy"></div>
+            </div>
+        </div>
+        <input type="text" id="friendName" placeholder="请输入伙伴的名字一起飞"/>
+        <a id="start" class="button">开始游戏</a>
+        <div class="aircraft"></div>
+        <p class="bottomText">那年与你一起混迹在游戏厅一起飞</p>
+   </div>
+</div>
+<div id="gameCanvas" style="display:none"></div>
+<script src="main.js"></script>
+<script src="frameworks/cocos2d-js-v3.6.js"></script>
+<!--
+<div id="version" style="position:absolute;height:50px;left:10px;top:10px;color:red;z-index:100;font-size:40px">version 1</div>
+<script src="supports/jweixin-1.0.0.js"></script>
+<script src="supports/zepto.min.js"></script>
+<script src="supports/util.js"></script>
+-->
+</body>
+</html>
+
